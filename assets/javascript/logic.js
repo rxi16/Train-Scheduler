@@ -21,7 +21,6 @@
       var name = $("#name-input").val().trim();
       var destination = $("#destination-input").val().trim();
       var firstTrainTime = $("#firstTrainTime-input").val().trim();
-      //var firstTrainTime = moment($("#firstTrainTime-input").val().trim(), "HH:mm").subtract(1, "days").format("X");
       var frequency = $("#frequency-input").val().trim();
 
       // Creates local "temporary" object for holding train data
@@ -76,7 +75,6 @@
 
       // calculate difference between current moment and firstTrainTimeConverted
       var timeToNow = moment().diff(firstTrainTimeConverted, "minutes");
-      //var timeToNow = moment().diff(moment(firstTrainTimeConverted), "minutes");
 
       // calculate modulus
       var modulus = timeToNow % frequency; 
